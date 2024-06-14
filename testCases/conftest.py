@@ -23,6 +23,7 @@ def setup(request, browser):
         chrome_options.binary_location = "C:/Program Files/Google/Chrome/Application/chrome.exe"
         driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
         driver.maximize_window()
+        request.cls.driver = driver # abhikk
         print("Launching Chrome Browser..................")
     else:
         chrome_service = ChromeService()
@@ -81,7 +82,7 @@ def pytest_runtest_makereport(item):
             extra.append(pytest_html.extras.html(extra_html))
         except Exception as e:
             print(f"Failed to save Screenshot: {e}")
-
+            
         
         report.extra = extra
     
