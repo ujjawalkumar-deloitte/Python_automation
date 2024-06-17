@@ -58,7 +58,7 @@ def pytest_configure(config):
 
 def pytest_configure(config):  #Adding new keys in enironment table of HTML report
     config.stash[metadata_key]["Name"] = "Ujjawal Kumar"
-    config.stash[metadata_key]["url"] = "https://automationteststore.com/"
+    config.stash[metadata_key]["url"] = "https://tutorialsninja.com/demo"
 
     unwanted_keys = ["JAVA_HOME", "Plugins", "Platform"]  #Removing unwanted keys from environment table of HTML report
     for keys in unwanted_keys:

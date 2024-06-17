@@ -7,7 +7,12 @@ Register_Page_locators = {
     "enter_telephone" : "input-telephone",
     "enter_password" : "//input[@id='input-password']",
     "enterConfirmPassword" : "//input[@id='input-confirm']",
-    "click_checkbox" : "//input[@name='agree']"
+    "click_checkbox" : "//input[@name='agree']",
+    "click_continue_button" : "//input[@value='Continue']",
+    "click_continue" : "//a[normalize-space()='Continue']",
+    "assert_mssg" : "//h1[normalize-space()='Your Account Has Been Created!']",
+    "alert_mssg" : "//div[@class='alert alert-danger alert-dismissible']",
+    "click_login" : "//a[@class='list-group-item'][normalize-space()='Login']"
 }
 
 ApparrelandAccessories = {

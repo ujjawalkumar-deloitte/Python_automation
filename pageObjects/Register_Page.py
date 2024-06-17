@@ -37,4 +37,27 @@ class RegisterPage:
         self.driver.find_element(By.XPATH, Register_Page_locators["click_checkbox"]).click()
         time.sleep(5)
 
+    def click_continue(self):
+        self.driver.find_element(By.XPATH, Register_Page_locators["click_continue_button"]).click()
+
+    def text_assert(self):
+        element = self.driver.find_element(By.XPATH, Register_Page_locators["assert_mssg"]).text
+        if element == "Your Account Has Been Created!":
+            print("Account created successfully!")
+            
+            assert True
+        else:
+            print("Account not created successfully!")
+            assert False
+    
+    def click_continueButton(self):
+        self.driver.find_element(By.XPATH, Register_Page_locators["click_continue"]).click()
+    
+    def click_login(self):
+        self.driver.find_element(By.XPATH, Register_Page_locators["click_login"]).click()
+        time.sleep(5)
+    
+
+
+
     
