@@ -24,4 +24,5 @@ Login_Page = {
 
     "enter_email" : "input-email",
     "enter_password" : "input-password",
+    "login_button" : "//input[@value='Login']"
 }

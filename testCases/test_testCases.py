@@ -55,6 +55,12 @@ class Test_Login:
         self.lp = LoginPage(self.driver)
         self.lp.enter_email(self.email)
         self.lp.enter_password(self.password)
+        self.lp.click_login()
+        act_title = self.driver.title
+        if act_title == "My Account":
+            assert True
+        else:
+            assert False
 
    
     

@@ -17,3 +17,7 @@ class LoginPage:
     def enter_password(self,password):
         self.driver.find_element(By.ID, Login_Page["enter_password"]).send_keys(password)
         time.sleep(5)
+
+    def click_login(self):
+        self.driver.find_element(By.XPATH, Login_Page["login_button"]).click()
+        time.sleep(5)
