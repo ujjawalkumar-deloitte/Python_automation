@@ -35,5 +35,6 @@ class RegisterPage:
     
     def click_checkbox(self):
         self.driver.find_element(By.XPATH, Register_Page_locators["click_checkbox"]).click()
+        time.sleep(5)
 
     
