@@ -1,12 +1,15 @@
 from selenium.webdriver.common.by import By
 from testData.locators import Register_Page_locators
+from testData.locators import log_file_path
 import time
+from utilities.logger import LoggerUtils
 
 
 class RegisterPage:
 
     def __init__(self, driver):
         self.driver = driver
+        self.log = LoggerUtils(log_file_path)
     
     def click_MyAccount(self):
         self.driver.find_element(By.XPATH, Register_Page_locators["click_MyAccount"]).click()

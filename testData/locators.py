@@ -1,3 +1,8 @@
+log_file_path = 'Logs/automation.log'
+
+
+
+
 Register_Page_locators = {
     "click_MyAccount" : "//a[@title='My Account']",
     "click_register" : "//a[normalize-space()='Register']",
@@ -15,13 +20,8 @@ Register_Page_locators = {
     "click_login" : "//a[@class='list-group-item'][normalize-space()='Login']"
 }
 
-ApparrelandAccessories = {
+Login_Page = {
 
-    "click_apparell" : "//*[@id='categorymenu']/nav/ul/li[2]/a",
-    "click_tshirt" : '//*[@id="categorymenu"]/nav/ul/li[2]/div/ul[1]/li[2]/a',
-    "click_add_to_cart_item1" : "(//*[@data-id='121'])[1]",
-    "click_AddToCart" : "//a[normalize-space()='Add to Cart']",
-    "click_add_to_cart_item2" : "(//*[@data-id='117'])[1]",
-    "click_add_to_cart_item3" : "(//*[@data-id='118'])[1]"
-
+    "enter_email" : "input-email",
+    "enter_password" : "input-password",
 }

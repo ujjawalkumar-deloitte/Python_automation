@@ -1,4 +1,5 @@
 from selenium.webdriver.common.by import By
+from pageObjects.Login_Page import LoginPage
 from pageObjects.Register_Page import RegisterPage
 from utilities.readProperties import ReadConfig
 from testData.locators import Register_Page_locators
@@ -19,25 +20,25 @@ class Test_Login:
     def test_RegisterPage(self,setup):
         self.driver = setup
         self.driver.get(self.baseURL)
-        self.lp = RegisterPage(self.driver)
-        self.lp.click_MyAccount()
-        self.lp.click_Register_tab()
-        self.lp.enter_Firstname(self.firstName)
-        self.lp.enter_Lastname(self.lastName)
-        self.lp.enter_password(self.password)
-        self.lp.enter_telephone(self.telephone)
-        self.lp.enter_Email(self.email)
-        self.lp.enterConfirmPassoword(self.confirmPassword)
-        self.lp.click_checkbox()
-        self.lp.click_continue()
+        self.rp = RegisterPage(self.driver)
+        self.rp.click_MyAccount()
+        self.rp.click_Register_tab()
+        self.rp.enter_Firstname(self.firstName)
+        self.rp.enter_Lastname(self.lastName)
+        self.rp.enter_password(self.password)
+        self.rp.enter_telephone(self.telephone)
+        self.rp.enter_Email(self.email)
+        self.rp.enterConfirmPassoword(self.confirmPassword)
+        self.rp.click_checkbox()
+        self.rp.click_continue()
         alert_messsage = self.driver.find_element(By.XPATH, Register_Page_locators["alert_mssg"]).text
         print(alert_messsage)
         if alert_messsage  == "Warning: E-Mail Address is already registered!":
-            self.lp.click_login()
+            self.rp.click_login()
             assert True
         else:
-            self.lp.text_assert()
-            self.lp.click_continueButton()
+            self.rp.text_assert()
+            self.rp.click_continueButton()
             assert False
         
         act_title = self.driver.title
@@ -45,6 +46,15 @@ class Test_Login:
             assert True
         else:
             assert False
+
+
+
+    def test_loginPage(self, setup):
+        self.driver = setup
+        self.rp = RegisterPage(self.driver)
+        self.lp = LoginPage(self.driver)
+        self.lp.enter_email(self.email)
+        self.lp.enter_password(self.password)
 
    
     
