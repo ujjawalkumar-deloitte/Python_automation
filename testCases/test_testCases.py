@@ -3,10 +3,10 @@ from pageObjects.Login_Page import LoginPage
 from pageObjects.Register_Page import RegisterPage
 from utilities.readProperties import ReadConfig
 from testData.locators import Register_Page_locators
+from pageObjects.Logout import LogoutPage
 
 
-
-class Test_Login:
+class AllPages:
 
     baseURL = ReadConfig.getApplicationURL()
     firstName = ReadConfig.getfirstName()
@@ -16,8 +16,7 @@ class Test_Login:
     telephone = ReadConfig.gettelephone()
     confirmPassword = ReadConfig.getConfirmPassword()
 
-
-    def test_RegisterPage(self,setup):
+    def test_RegisterPage(self, setup):
         self.driver = setup
         self.driver.get(self.baseURL)
         self.rp = RegisterPage(self.driver)
@@ -31,23 +30,22 @@ class Test_Login:
         self.rp.enterConfirmPassoword(self.confirmPassword)
         self.rp.click_checkbox()
         self.rp.click_continue()
-        alert_messsage = self.driver.find_element(By.XPATH, Register_Page_locators["alert_mssg"]).text
+        alert_messsage = self.driver.find_element(
+            By.XPATH, Register_Page_locators["alert_mssg"]).text
         print(alert_messsage)
-        if alert_messsage  == "Warning: E-Mail Address is already registered!":
+        if alert_messsage == "Warning: E-Mail Address is already registered!":
             self.rp.click_login()
             assert True
         else:
             self.rp.text_assert()
             self.rp.click_continueButton()
             assert False
-        
+
         act_title = self.driver.title
         if act_title == "Account Login":
             assert True
         else:
             assert False
-
-
 
     def test_loginPage(self, setup):
         self.driver = setup
@@ -62,5 +60,14 @@ class Test_Login:
         else:
             assert False
 
-   
-    
+    def test_logout(self, setup):
+        self.driver = setup
+        self.lp = LoginPage(self.driver)
+        self.lo = LogoutPage(self.driver)
+        self.lo.click_logout()
+        act_title = self.driver.title
+        if act_title == "Account Logout":
+            print(act_title)
+            assert True
+        else:
+            assert False

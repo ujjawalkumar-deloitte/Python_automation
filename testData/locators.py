@@ -26,3 +26,7 @@ Login_Page = {
     "enter_password" : "input-password",
     "login_button" : "//input[@value='Login']"
 }
+
+Logout = {
+    "logout_button" : "//a[@class='list-group-item'][normalize-space()='Logout']"
+}
