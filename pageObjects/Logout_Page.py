@@ -1,14 +1,12 @@
 from selenium.webdriver.common.by import By
-from testData.locators import Logout
 import time
+from testData.locators import Logout_Page
 
-
-class LogoutPage:
-
+class Logout:
     def __init__(self, driver):
         self.driver = driver
-    
+
 
     def click_logout(self):
-        self.driver.find_element(By.XPATH, Logout["logout_button"]).click()
+        self.driver.find_element(By.XPATH, Logout_Page["click_logout"]).click()
         time.sleep(5)

@@ -27,6 +27,6 @@ Login_Page = {
     "login_button" : "//input[@value='Login']"
 }
 
-Logout = {
-    "logout_button" : "//a[@class='list-group-item'][normalize-space()='Logout']"
+Logout_Page = {
+    "click_logout" : "//a[@class='list-group-item'][normalize-space()='Logout']"
 }
