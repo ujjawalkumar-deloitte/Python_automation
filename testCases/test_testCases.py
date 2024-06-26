@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from pageObjects.Login_Page import LoginPage
 from pageObjects.Logout_Page import Logout
 from pageObjects.Register_Page import RegisterPage
+from pageObjects.nav_bar import Nav_Bar
 from utilities.readProperties import ReadConfig
 from testData.locators import Register_Page_locators
 
@@ -62,6 +63,15 @@ class Test_Login:
             assert True
         else:
             assert False
+
+    def test_nav_bar(self,setup):
+        self.driver = setup
+        self.lp = LoginPage(self.driver)
+        self.nav = Nav_Bar(self.driver)
+        self.nav.nav_headers1()
+        self.nav.add_to_cart()
+
+
 
     def test_logout(self, setup):
         self.driver = setup

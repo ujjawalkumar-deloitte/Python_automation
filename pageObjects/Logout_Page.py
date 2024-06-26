@@ -8,5 +8,6 @@ class Logout:
 
 
     def click_logout(self):
+        self.driver.find_element(By.XPATH, Logout_Page["click_MyAccount"]).click()
         self.driver.find_element(By.XPATH, Logout_Page["click_logout"]).click()
         time.sleep(5)
