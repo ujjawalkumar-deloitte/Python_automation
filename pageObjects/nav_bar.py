@@ -28,7 +28,7 @@ class Nav_Bar:
         actions.move_to_element(element_to_hover_over).perform()
         self.driver.find_element(By.XPATH, nav_headers1["click_show_all_desktops"]).click()
 
-        
+
         
     def add_to_cart(self):
         time.sleep(5)

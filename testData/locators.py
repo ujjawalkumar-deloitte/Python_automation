@@ -59,6 +59,30 @@ Add_To_Cart_list = [
     {"click_add_to_cart" : "//*[@id='content']/div[4]/div[3]/div/div[2]/div[2]/button[1]"}
 ]
 
+
+shopping_cart = {
+
+    "click_shopping_cart" : "//a[@title='Shopping Cart']",
+    "total_cart_items" : "//span[@id='cart-total']",
+    "alert_message" : "//div[@class='alert alert-danger alert-dismissible']",
+    "success_alert_message" : "//div[@class='alert alert-success alert-dismissible']",
+    "click_checkout" : "//a[@class='btn btn-primary']"
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Logout_Page = {
     "click_MyAccount" : "//a[@title='My Account']",
     "click_logout" : "//a[normalize-space()='Logout']"

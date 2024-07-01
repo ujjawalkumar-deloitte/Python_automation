@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from pageObjects.Login_Page import LoginPage
 from pageObjects.Logout_Page import Logout
 from pageObjects.Register_Page import RegisterPage
+from pageObjects.Shopping_Cart import Cart_Page
 from pageObjects.nav_bar import Nav_Bar
 from utilities.readProperties import ReadConfig
 from testData.locators import Register_Page_locators
@@ -70,6 +71,13 @@ class Test_Login:
         self.nav = Nav_Bar(self.driver)
         self.nav.nav_headers1()
         self.nav.add_to_cart()
+
+    def test_shopping_cart(self,setup):
+        self.driver = setup
+        self.nav = Nav_Bar(self.driver)
+        self.cart = Cart_Page(self.driver)
+        self.cart.click_shopping_cart()
+        self.cart.click_checkout()
 
 
 
