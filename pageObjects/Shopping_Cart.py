@@ -36,5 +36,11 @@ class Cart_Page:
         if alert_added_item in added_item_table:
             click_remove = self.driver.find_element(By.XPATH, shopping_cart["click_remove_button"])
             click_remove.click()
-        else:
             self.driver.find_element(By.XPATH, shopping_cart["click_checkout"]).click()
+        else:
+            act_title = self.driver.title
+            if act_title == "Shopping Cart":
+                assert True
+            else:
+                assert False
+            
