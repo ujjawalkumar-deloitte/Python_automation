@@ -66,7 +66,10 @@ shopping_cart = {
     "total_cart_items" : "//span[@id='cart-total']",
     "alert_message" : "//div[@class='alert alert-danger alert-dismissible']",
     "success_alert_message" : "//div[@class='alert alert-success alert-dismissible']",
-    "click_checkout" : "//a[@class='btn btn-primary']"
+    "click_checkout" : "//a[@class='btn btn-primary']",
+    "total_items_added_in_cart" : "//*[@id='content']/form/div/table/tbody",
+    "added_item_with_star" : "//*[@id='content']/form/div/table/tbody/tr[3]",
+    "click_remove_button" : "//tbody/tr[3]/td[4]/div[1]/span[1]/button[2]"
    
 }
 
