@@ -31,14 +31,12 @@ class RegisterPage:
 
     def enter_Email(self, email):
         self.driver.find_element(By.ID, Register_Page_locators["enter_email"]).send_keys(email)
-        time.sleep(10)
     
     def enterConfirmPassoword(self,confirmPassword):
         self.driver.find_element(By.XPATH, Register_Page_locators["enterConfirmPassword"]).send_keys(confirmPassword) 
     
     def click_checkbox(self):
         self.driver.find_element(By.XPATH, Register_Page_locators["click_checkbox"]).click()
-        time.sleep(5)
 
     def click_continue(self):
         self.driver.find_element(By.XPATH, Register_Page_locators["click_continue_button"]).click()
@@ -58,8 +56,7 @@ class RegisterPage:
     
     def click_login(self):
         self.driver.find_element(By.XPATH, Register_Page_locators["click_login"]).click()
-        time.sleep(5)
-    
+        
 
 
 

@@ -1,0 +1,9 @@
+total items in cart: 3 item(s) - $366.00
+item added in cart: iPod Shuffle Product 7
+$122.00 $122.00
+iPod Nano Product 9
+$122.00 $122.00
+iPod Classic *** product 20
+$122.00 $122.00
+items in cart with star: iPod Classic *** product 20
+$122.00 $122.00

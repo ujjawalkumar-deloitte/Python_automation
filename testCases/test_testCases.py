@@ -6,6 +6,7 @@ from pageObjects.Shopping_Cart import Cart_Page
 from pageObjects.nav_bar import Nav_Bar
 from utilities.readProperties import ReadConfig
 from testData.locators import Register_Page_locators
+from pageObjects.Checkout_Page import Checkout_Page
 
 
 
@@ -77,20 +78,27 @@ class Test_Login:
         self.nav = Nav_Bar(self.driver)
         self.cart = Cart_Page(self.driver)
         self.cart.click_shopping_cart()
-        self.cart.click_checkout()
+        self.cart.add_items_in_cart()
+        
 
-
-
-    def test_logout(self, setup):
+    def test_checkout(self, setup):
         self.driver = setup
-        self.lp = LoginPage(self.driver)
-        self.lo = Logout(self.driver)
-        self.lo.click_logout()
-        act_title = self.driver.title
-        if act_title == "Account Logout":
-            print("Account Logged Out successfully")
-        else:
-            print("Not Logged Out")
+        self.cart = Cart_Page(self.driver)
+        self.checkout = Checkout_Page(self.driver)
+        self.checkout.click_checkout()
+
+
+
+    # def test_logout(self, setup):
+    #     self.driver = setup
+    #     self.checkout = Checkout_Page(self.driver)        
+    #     self.lo = Logout(self.driver)
+    #     self.lo.click_logout()
+    #     act_title = self.driver.title
+    #     if act_title == "Account Logout":
+    #         print("Account Logged Out successfully")
+    #     else:
+    #         print("Not Logged Out")
             
 
    
