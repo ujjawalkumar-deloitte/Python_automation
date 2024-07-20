@@ -38,3 +38,18 @@ class ReadConfig:
     def getConfirmPassword():
         password=config.get('common_info','confirmPassword')
         return password
+
+    @staticmethod
+    def getAddress():
+        Address = config.get('common_info', 'Address')
+        return Address
+    
+    @staticmethod
+    def getCity():
+        City = config.get('common_info', 'City')
+        return City
+    
+    @staticmethod
+    def getPostCode():
+        PostCode = config.get('common_info', 'PostCode')  
+        return PostCode

@@ -19,6 +19,9 @@ class Test_Login:
     email = ReadConfig.getEmail()
     telephone = ReadConfig.gettelephone()
     confirmPassword = ReadConfig.getConfirmPassword()
+    Address = ReadConfig.getAddress()
+    City = ReadConfig.getCity()
+    PostCode = ReadConfig.getPostCode()
 
 
     def test_RegisterPage(self,setup):
@@ -85,20 +88,22 @@ class Test_Login:
         self.driver = setup
         self.cart = Cart_Page(self.driver)
         self.checkout = Checkout_Page(self.driver)
-        self.checkout.click_checkout()
+        self.checkout.click_checkout(self.Address,self.firstName,self.City,self.PostCode,self.lastName)
+        # self.checkout.confirm_order()
+
+   
 
 
-
-    # def test_logout(self, setup):
-    #     self.driver = setup
-    #     self.checkout = Checkout_Page(self.driver)        
-    #     self.lo = Logout(self.driver)
-    #     self.lo.click_logout()
-    #     act_title = self.driver.title
-    #     if act_title == "Account Logout":
-    #         print("Account Logged Out successfully")
-    #     else:
-    #         print("Not Logged Out")
+    def test_logout(self, setup):
+        self.driver = setup
+        self.checkout = Checkout_Page(self.driver)        
+        self.lo = Logout(self.driver)
+        self.lo.click_logout()
+        act_title = self.driver.title
+        if act_title == "Account Logout":
+            print("Account Logged Out successfully")
+        else:
+            print("Not Logged Out")
             
 
    

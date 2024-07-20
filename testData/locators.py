@@ -71,7 +71,25 @@ shopping_cart = {
    
 }
 
-checkout = {    "click_checkout" : "//span[normalize-space()='Checkout']"
+checkout = {    "click_checkout" : "//strong[normalize-space()='Checkout']",
+                "click_cart_total" : '//*[@id="cart"]/button',
+                "firstName": "//input[@id='input-payment-firstname']",
+                "lastName": "//input[@id='input-payment-lastname']",
+                "Address1" : '//*[@id="input-payment-address-1"]',
+                "City" : "//input[@id='input-payment-city']",
+                "Postcode" : "//input[@id='input-payment-postcode']",
+                "country_dropdown" : "//select[@id='input-payment-country']",
+                "select_country": "//option[@value='99']",
+                "state_dropdown" : "//select[@id='input-payment-zone']",
+                "select_state" : "//option[@value='1479']",
+                "continue_button1" : "//input[@id='button-payment-address']",
+                "continue_button2" : "//input[@id='button-shipping-address']",
+                "continue_button3" : "//input[@id='button-shipping-method']",
+                "continue_button4" : "//input[@id='button-payment-method']",
+                "click_tickbox" : "//input[@name='agree']",
+                "confirm_order" : "//input[@id='button-confirm']",
+                "order_confirmed_message" : "//h1[normalize-space()='Your order has been placed!']"
+
 
 }
 
