@@ -1,0 +1,1 @@
+pytest --alluredir=Reports/Automation_report --browser chrome

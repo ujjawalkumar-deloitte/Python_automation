@@ -77,8 +77,8 @@ def pytest_runtest_makereport(item):
     if (report.when == 'call' or report.when == "setup") and (report.skipped or report.failed ):
         report_directory = os.path.dirname(item.config.option.htmlpath)
         file_name = "screenshot/" + report.nodeid.replace("::", "_") + ".png"
-        file_path = os.path.join(report_directory, file_name)
-        # file_path = f"Screenshots/{report.nodeid.replace(':', '_')}.png"
+        # file_path = os.path.join(report_directory, file_name)
+        file_path = f"Screenshots/{report.nodeid.replace(':', '_')}.png"
         
         try:
             os.makedirs(os.path.dirname(file_path), exist_ok=True)  # Corrected path and filename
