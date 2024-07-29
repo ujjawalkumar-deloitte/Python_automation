@@ -28,17 +28,6 @@ Login_Page = {
 }
 
 
-# Nav_bar_list = [
-#     {"header1" : "//a[normalize-space()='Desktops']"},
-#     {"header2" : "//a[normalize-space()='Laptops & Notebooks']"},
-#     {"header3" : "//a[normalize-space()='Components']"},
-#     {"header4" : "//a[normalize-space()='Software']"},
-#     {"header5" : "//a[normalize-space()='Tablets']"},
-#     {"header6" : "//a[normalize-space()='Phones & PDAs']"},
-#     {"header7" : "//a[normalize-space()='Cameras']"},
-#     {"header8" : "//a[normalize-space()='MP3 Players']"}
-#     ]
-
 nav_headers1 = {
 
     "header1" : "//a[normalize-space()='MP3 Players']",

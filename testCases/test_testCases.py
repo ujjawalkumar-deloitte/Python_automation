@@ -9,7 +9,6 @@ from testData.locators import Register_Page_locators
 from pageObjects.Checkout_Page import Checkout_Page
 
 
-
 class Test_Login:
 
     baseURL = ReadConfig.getApplicationURL()
@@ -22,7 +21,6 @@ class Test_Login:
     Address = ReadConfig.getAddress()
     City = ReadConfig.getCity()
     PostCode = ReadConfig.getPostCode()
-
 
     def test_RegisterPage(self,setup):
         self.driver = setup
