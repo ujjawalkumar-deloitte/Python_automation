@@ -1,0 +1,14 @@
+[pytest]
+python_files = test_*.py
+python_functions = test_*
+testpaths = tests
+log_cli = true
+env =
+    logging_level=DEBUG
+    ; db_url=sqlite:///./test.db
+    db_url=postgresql+psycopg2://postgres:1234@localhost:5433/postgres?options=--search_path=testing_api
+    error_config=./error_codes.csv
+    api_prefix=/api
+    db_statement_echo=False
+    ENVIRONMENT=Test
+    AWS_XRAY_SDK_ENABLED=false
